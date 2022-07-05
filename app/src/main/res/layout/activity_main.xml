@@ -1,18 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ececec"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="209dp"
+            android:layout_marginTop="-7dp"
+            app:srcCompat="@drawable/nwm_background"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+    </LinearLayout>
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="245dp"
+        android:text="Neo Woodworking"
+        android:textAlignment="center"
+        android:textColor="@color/blue_nwm"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        tools:ignore="HardcodedText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Machinery"
+        android:textAlignment="center"
+        android:textColor="@color/blue_nwm"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/Username"
+            android:hint="Username"
+            android:inputType="text"
+            android:layout_width="305dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="400dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:importantForAutofill="no"
+            tools:ignore="HardcodedText,TextContrastCheck"/>
+
+        <EditText
+            android:id="@+id/Password"
+            android:hint="Password"
+            android:inputType="text"
+            android:layout_width="305dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="500dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:importantForAutofill="no"
+            tools:ignore="HardcodedText,TextContrastCheck,TextFields"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/LoginButton"
+        android:layout_width="305dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/background_btn_blue"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"/>
+
+
+</RelativeLayout>
+
+
+
