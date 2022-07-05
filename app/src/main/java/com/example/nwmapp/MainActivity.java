@@ -2,51 +2,54 @@ package com.example.nwmapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.widget.Button;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity {
-
-    Button btnNext;
-    Button btnJob;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
-        btnNext=findViewById(R.id.btnNext);
-        btnNext.setOnClickListener(view -> openNewActivity());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        btnJob=findViewById(R.id.btnJob);
-        btnJob.setOnClickListener(view -> openNewActivity());
+        EditText Username =(EditText) findViewById(R.id.Username);
+        EditText Password =(EditText) findViewById(R.id.Password);
 
+        AppCompatButton LoginButton = (AppCompatButton) findViewById(R.id.LoginButton);
 
+        //admin and admin
 
+        LoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Username.getText().toString().equals("admin") && Password.getText().toString().equals("admin123")){
+                    //correct
+                    Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
+
+                    openNewActivity();
+                    
+                }else
+                    //incorrect
+                    Toast.makeText(MainActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottom_nav, menu);
-        return true;
-    }
-
-    public void openNewActivity() {
-        Intent intent = new Intent(this, HomeKeong.class);
+    private void openNewActivity() {
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
-
-        Intent intent1 = new Intent(this, HomeActivity.class);
-        startActivity(intent1);
-
-
-
     }
-
-
 }
