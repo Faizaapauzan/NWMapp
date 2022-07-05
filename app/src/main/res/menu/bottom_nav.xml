@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/job_listing"
+        android:id="@+id/joblisting"
+        android:icon="@drawable/joblisting"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="@string/pending"
+        android:id="@+id/pending"
+        android:icon="@drawable/pending"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="@string/home"
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="@string/incomplete"
+        android:id="@+id/incomplete"
+        android:icon="@drawable/incomplete"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="@string/complete"
+        android:id="@+id/complete"
+        android:icon="@drawable/completed"
+        app:showAsAction="never"/>
+
+
+</menu>
