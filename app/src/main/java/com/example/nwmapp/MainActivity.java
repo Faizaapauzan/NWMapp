@@ -8,8 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.button.MaterialButton;
+import androidx.appcompat.widget.AppCompatButton;
 
 import java.util.Objects;
 
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         EditText Username =(EditText) findViewById(R.id.Username);
         EditText Password =(EditText) findViewById(R.id.Password);
 
-        MaterialButton LoginButton = (MaterialButton) findViewById(R.id.LoginButton);
+        AppCompatButton LoginButton = (AppCompatButton) findViewById(R.id.LoginButton);
 
         //admin and admin
 
