@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:title="@string/home"
+            android:id="@+id/home"
+            android:icon="@drawable/home" />
+
+        <item
+            android:title="@string/attendance"
+            android:id="@+id/attendance"
+            android:icon="@drawable/attendance" />
+
+    <item
+        android:title="@string/rest_hour"
+        android:id="@+id/resthour"
+        android:icon="@drawable/resthour" />
+
+    <item
+        android:title="@string/report_off"
+        android:id="@+id/report_off"
+        android:icon="@drawable/reportoff" />
+
+
+
+
+                <item android:id="@+id/assign"
+                    android:title="@string/assigned_job"
+                    android:icon="@drawable/assign"/>
+
+                <item android:id="@+id/unassign"
+                    android:title="@string/unassigned_job"
+                    android:icon="@drawable/notassign"/>
+
+
+
+        <item
+            android:title="@string/pending"
+            android:id="@+id/pending"
+            android:icon="@drawable/pending" />
+
+
+        <item
+            android:title="@string/incomplete"
+            android:id="@+id/incomplete"
+            android:icon="@drawable/incomplete" />
+
+        <item
+            android:title="@string/complete"
+            android:id="@+id/complete"
+            android:icon="@drawable/completed" />
+
+        <item
+            android:title="@string/log_out"
+            android:id="@+id/logout"
+            android:icon="@drawable/logout" />
+
+</menu>

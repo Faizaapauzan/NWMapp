@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#E8E2E2"
+    android:padding="15dp"
+    android:layout_height="185dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:src="@drawable/neowood"
+        android:layout_height="110dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

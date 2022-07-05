@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">NWMapp</string>
+    <string name="job_listing">Job Listing</string>
+    <string name="pending">Pending</string>
+    <string name="home">Home</string>
+    <string name="incomplete">Incomplete</string>
+    <string name="complete">Complete</string>
+    <string name="welcome">Welcome</string>
+    <string name="todo">Todo</string>
+    <string name="doing">Doing</string>
+    <string name="assigned_job">Assigned Job</string>
+    <string name="unassigned_job">Unassigned Job</string>
+    <string name="completed">Completed</string>
+    <string name="logout">Logout</string>
+    <string name="boon">Boon</string>
+    <string name="teck">Teck</string>
+    <string name="aizat">Aizat</string>
+    <string name="hafiz">Hafiz</string>
+    <string name="hamir">Hamir</string>
+    <string name="hwa">Hwa</string>
+    <string name="iskandar">Iskandar</string>
+    <string name="john">John</string>
+    <string name="jun_jie">Jun Jie</string>
+    <string name="razwill">Razwill</string>
+    <string name="sahele">Sahele</string>
+    <string name="sazaly">Sazaly</string>
+    <string name="faizan">Faizan</string>
+    <string name="fauzin">Fauzin</string>
+    <string name="izaan">Izaan</string>
+    <string name="salam">Salam</string>
+    <string name="button">Button</string>
+    <string name="job">Job</string>
+    <string name="keong">Keong</string>
+    <string name="menu_drawer_open">Drawer Open</string>
+    <string name="menu_drawer_close">Drawer Close</string>
+    <string name="dashboard">Dashboard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="attendance">Attendance</string>
+    <string name="rest_hour">Rest Hour</string>
+    <string name="report_off">Report Off</string>
+    <string name="log_out">Log Out</string>
 </resources>
