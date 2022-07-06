@@ -1,5 +1,6 @@
 package com.example.nwmapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nwmapp.Fragment.AssignedJobFragment;
+import com.example.nwmapp.Fragment.UnassignJobFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -38,15 +40,26 @@ public class HomeActivity extends AppCompatActivity {
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.unassign) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                    Toast.makeText(HomeActivity.this, "Unassigned Job", Toast.LENGTH_SHORT).show();
+                switch (item.getItemId()){
+                    case R.id.assign:
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(HomeActivity.this, "Assign Job", Toast.LENGTH_SHORT).show();
 
-                    fragmentR(new AssignedJobFragment());
+                        fragmentR(new AssignedJobFragment());
+
+                        break;
+
+                    case R.id.unassign:
+
+                        fragmentR(new UnassignJobFragment());
+
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(HomeActivity.this, "Unassign Job", Toast.LENGTH_SHORT).show();
+                        break;
                 }
-
                 return true;
             }
         });
@@ -56,7 +69,7 @@ public class HomeActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.drawerLayout,fragment);
+        fragmentTransaction.replace(R.id.frameLayout,fragment);
         fragmentTransaction.commit();
     }
 }

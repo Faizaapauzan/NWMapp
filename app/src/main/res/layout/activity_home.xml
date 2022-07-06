@@ -50,9 +50,7 @@
             android:text="@string/todo"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvTodo"
@@ -75,9 +73,8 @@
             android:text="@string/doing"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
+            android:textStyle="bold" />
 
-            />
         <androidx.cardview.widget.CardView
             android:id="@+id/cvDoing"
             android:layout_width="match_parent"
@@ -99,9 +96,7 @@
             android:text="@string/pending"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -119,9 +114,7 @@
             android:text="@string/completed"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
