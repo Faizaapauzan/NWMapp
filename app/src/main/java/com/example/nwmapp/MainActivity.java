@@ -31,17 +31,34 @@ public class MainActivity extends AppCompatActivity {
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Username.getText().toString().equals("admin") && Password.getText().toString().equals("admin123")){
+                if(Username.getText().toString().equals("admin") && Password.getText().toString().equals("admin123"))
+                {
                     //correct
                     Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
 
                     openNewActivity();
-                    
-                }else
+                }
+
+                else if (Username.getText().toString().equals("keong") && Password.getText().toString().equals("keong123"))
+                {
+                    //correct
+                    Toast.makeText(MainActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
+
+                    openKeong();
+                }
+
+                else
+                {
                     //incorrect
                     Toast.makeText(MainActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    private void openKeong() {
+        Intent intent = new Intent(this, HomeKeong.class);
+        startActivity(intent);
     }
 
     private void openNewActivity() {
