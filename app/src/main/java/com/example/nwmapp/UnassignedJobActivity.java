@@ -58,26 +58,24 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
+        if(item.getItemId()== R.id.home) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this,HomeActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.home:
-                break;
+        if(item.getItemId()== R.id.assign) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this, AssignedJobActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.assign:
-                Intent intent5 = new Intent(UnassignedJobActivity.this,AssignedJobActivity.class);
-                startActivity(intent5);
-                break;
+        if(item.getItemId()== R.id.unassign) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.unassign:
-                Intent intent6 = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
-                startActivity(intent6);
-                break;
-
-            case R.id.complete:
-                Intent intent9 = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
-                startActivity(intent9);
-                break;
-
+        if(item.getItemId()== R.id.complete) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
+            startActivity(intent5);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

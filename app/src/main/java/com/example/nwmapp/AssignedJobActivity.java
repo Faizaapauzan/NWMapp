@@ -59,26 +59,24 @@ public class AssignedJobActivity extends AppCompatActivity implements Navigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
-
-            case R.id.home:
-                break;
-
-            case R.id.assign:
-                Intent intent5 = new Intent(AssignedJobActivity.this,AssignedJobActivity.class);
+        if(item.getItemId()== R.id.home) {
+                Intent intent5 = new Intent(AssignedJobActivity.this,HomeActivity.class);
                 startActivity(intent5);
-                break;
+            }
 
-            case R.id.unassign:
-                Intent intent6 = new Intent(AssignedJobActivity.this, UnassignedJobActivity.class);
-                startActivity(intent6);
-                break;
+        if(item.getItemId()== R.id.assign) {
+            Intent intent5 = new Intent(AssignedJobActivity.this, AssignedJobActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.complete:
-                Intent intent9 = new Intent(AssignedJobActivity.this, CompleteActivity.class);
-                startActivity(intent9);
-                break;
+        if(item.getItemId()== R.id.unassign) {
+            Intent intent5 = new Intent(AssignedJobActivity.this, UnassignedJobActivity.class);
+            startActivity(intent5);
+        }
 
+        if(item.getItemId()== R.id.complete) {
+            Intent intent5 = new Intent(AssignedJobActivity.this, CompleteActivity.class);
+            startActivity(intent5);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

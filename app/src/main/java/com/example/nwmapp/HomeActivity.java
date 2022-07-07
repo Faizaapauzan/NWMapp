@@ -58,26 +58,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
+        if(item.getItemId()== R.id.home) {
+            Intent intent5 = new Intent(HomeActivity.this,HomeActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.home:
-                break;
+        if(item.getItemId()== R.id.assign) {
+            Intent intent5 = new Intent(HomeActivity.this, AssignedJobActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.assign:
-                Intent intent1 = new Intent(HomeActivity.this,AssignedJobActivity.class);
-                startActivity(intent1);
-                break;
+        if(item.getItemId()== R.id.unassign) {
+            Intent intent5 = new Intent(HomeActivity.this, UnassignedJobActivity.class);
+            startActivity(intent5);
+        }
 
-            case R.id.unassign:
-                Intent intent2 = new Intent(HomeActivity.this, UnassignedJobActivity.class);
-                startActivity(intent2);
-                break;
-
-            case R.id.complete:
-                Intent intent3 = new Intent(HomeActivity.this, CompleteActivity.class);
-                startActivity(intent3);
-                break;
-
+        if(item.getItemId()== R.id.complete) {
+            Intent intent5 = new Intent(HomeActivity.this, CompleteActivity.class);
+            startActivity(intent5);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
