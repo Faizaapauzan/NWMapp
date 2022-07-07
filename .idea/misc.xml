@@ -11,9 +11,11 @@
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_password.xml" value="0.211" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_username.xml" value="0.211" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_view_bg.xml" value="0.181" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job.xml" value="0.15820489573889393" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fl.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fst.xml" value="0.25" />
-        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.15604959384352288" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.13095238095238096" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home_keong.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job.xml" value="0.1675929884566054" />
