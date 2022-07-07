@@ -13,7 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class UnassignedJobActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     DrawerLayout drawerLayout;
@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_unassigned_job);
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
@@ -56,22 +56,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()== R.id.home) {
-            Intent intent5 = new Intent(HomeActivity.this,HomeActivity.class);
+            Intent intent5 = new Intent(UnassignedJobActivity.this,HomeActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.assign) {
-            Intent intent5 = new Intent(HomeActivity.this, AssignedJobActivity.class);
+            Intent intent5 = new Intent(UnassignedJobActivity.this, AssignedJobActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.unassign) {
-            Intent intent5 = new Intent(HomeActivity.this, UnassignedJobActivity.class);
+            Intent intent5 = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.complete) {
-            Intent intent5 = new Intent(HomeActivity.this, CompleteActivity.class);
+            Intent intent5 = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
             startActivity(intent5);
         }
 
