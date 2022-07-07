@@ -7,25 +7,24 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.DrawableWrapper;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class TestActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class CompleteActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pending);
+        setContentView(R.layout.activity_complete);
 
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
@@ -58,7 +57,7 @@ public class TestActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.pending:
-                Intent intent = new Intent(TestActivity.this,HomeActivity.class);
+                Intent intent = new Intent(CompleteActivity.this,HomeActivity.class);
                 startActivity(intent);
                 break;
 
@@ -68,3 +67,4 @@ public class TestActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 }
+

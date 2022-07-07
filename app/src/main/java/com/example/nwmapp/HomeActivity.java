@@ -1,6 +1,7 @@
 package com.example.nwmapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -11,64 +12,65 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nwmapp.Fragment.AssignedJobFragment;
+
+
 import com.google.android.material.navigation.NavigationView;
 
-public class HomeActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
 
     DrawerLayout drawerLayout;
-    Toolbar toolbar;
     NavigationView navigationView;
+    Toolbar toolbar;
+
+    public static void closeDrawer(DrawerLayout drawerLayout) {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.nav);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.tool_bar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.menu_drawer_open,R.string.menu_drawer_close );
+        setSupportActionBar(toolbar);
+
+        navigationView.bringToFront();
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.menu_drawer_open, R.string.menu_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
-        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @SuppressLint("NonConstantResourceId")
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.assign:
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Toast.makeText(HomeActivity.this, "Assign Job", Toast.LENGTH_SHORT).show();
-
-                        fragmentR(new AssignedJobFragment());
-
-                        break;
-
-                    case R.id.pending:
-
-                        fragmentR(new PendingFragment());
-
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Toast.makeText(HomeActivity.this, "Unassign Job", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void fragmentR(Fragment fragment){
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout,fragment);
-        fragmentTransaction.commit();
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.home:
+                break;
+
+            case R.id.pending:
+                Intent intent = new Intent(HomeActivity.this,CompleteActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
