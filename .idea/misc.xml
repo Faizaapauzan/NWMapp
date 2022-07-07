@@ -3,27 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_edt.xml" value="0.2045" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_view_bg.xml" value="0.2045" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_pending.xml" value="0.18070652173913043" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_second.xml" value="0.2" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_test.xml" value="0.1" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_assigned_job.xml" value="0.1" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_pending.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/headerfile.xml" value="0.18885869565217392" />
-        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/menu/sidemenu.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_assigned_job.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_complete.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_pending.xml" value="0.29683698296836986" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/header.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/menu_bar.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/sidemenu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.1609375" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_blue.xml" value="0.2115" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/bg_edit_text.xml" value="0.211" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/custom_input.xml" value="0.2105" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_lock.xml" value="0.185" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_open.xml" value="0.185" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_password.xml" value="0.211" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_username.xml" value="0.211" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_view_bg.xml" value="0.181" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fl.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fst.xml" value="0.25" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.13095238095238096" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home_keong.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job_fl.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_assigned_job.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_unassign_job.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/header.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/bottom_nav.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/sidemenu.xml" value="0.5" />
       </map>
     </option>
   </component>
