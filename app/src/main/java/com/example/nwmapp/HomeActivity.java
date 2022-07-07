@@ -16,7 +16,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nwmapp.Fragment.AssignedJobFragment;
-import com.example.nwmapp.Fragment.UnassignJobFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -52,9 +51,9 @@ public class HomeActivity extends AppCompatActivity {
 
                         break;
 
-                    case R.id.unassign:
+                    case R.id.pending:
 
-                        fragmentR(new UnassignJobFragment());
+                        fragmentR(new PendingFragment());
 
                         drawerLayout.closeDrawer(GravityCompat.START);
                         Toast.makeText(HomeActivity.this, "Unassign Job", Toast.LENGTH_SHORT).show();
