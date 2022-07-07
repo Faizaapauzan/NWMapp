@@ -40,4 +40,13 @@
     <string name="rest_hour">Rest Hour</string>
     <string name="report_off">Report Off</string>
     <string name="log_out">Log Out</string>
+    <string name="job_assign">job_assign</string>
+    <string name="job_priority">job_priority</string>
+    <string name="job_order_number">job_order_number</string>
+    <string name="customer_name">customer_name</string>
+    <string name="job_description">job_description</string>
+    <string name="machine_name">machine_name</string>
+    <string name="machine_type">machine_type</string>
+    <string name="serialnumber">serialnumber</string>
+    <string name="reason">reason</string>
 </resources>
