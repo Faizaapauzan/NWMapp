@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class CompleteActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class CompleteActivity extends AppCompatActivity  {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -26,45 +26,11 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.tool_bar);
 
-        setSupportActionBar(toolbar);
 
-        navigationView.bringToFront();
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.menu_drawer_open, R.string.menu_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.home:
-                break;
-
-            case R.id.pending:
-                Intent intent = new Intent(CompleteActivity.this,HomeActivity.class);
-                startActivity(intent);
-                break;
-
-        }
-
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
-}
 

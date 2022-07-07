@@ -26,9 +26,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
 
-    public static void closeDrawer(DrawerLayout drawerLayout) {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +60,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.home:
                 break;
 
-            case R.id.pending:
+            case R.id.complete:
                 Intent intent = new Intent(HomeActivity.this,CompleteActivity.class);
                 startActivity(intent);
                 break;

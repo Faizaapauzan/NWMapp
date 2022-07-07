@@ -16,6 +16,7 @@
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -24,99 +25,45 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         />
+
+
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:layout_marginTop="60dp"
-                android:background="#D30000" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_marginTop="60dp"
+        android:background="#D30000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#EDEDED"
-                android:text="@string/todo"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:text="Completed"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvTodo"
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:background="@drawable/card_background"
-                app:cardCornerRadius="8dp" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:background="#D30000" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#EDEDED"
-                android:text="@string/doing"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvDoing"
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:background="@drawable/card_background"
-                app:cardCornerRadius="8dp" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:background="#FF5722" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#EDEDED"
-                android:text="@string/pending"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="170dp" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"
-                android:background="#673AB7" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#EDEDED"
-                android:text="@string/completed"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="170dp" />
-        </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/card_background"
+        app:cardCornerRadius="8dp" />
+    </LinearLayout>
     </ScrollView>
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
