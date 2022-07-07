@@ -16,7 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class UnassignedJobActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     DrawerLayout drawerLayout;
@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_unassigned_job);
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
@@ -64,18 +64,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.assign:
-                Intent intent1 = new Intent(HomeActivity.this,AssignedJobActivity.class);
-                startActivity(intent1);
+                Intent intent5 = new Intent(UnassignedJobActivity.this,AssignedJobActivity.class);
+                startActivity(intent5);
                 break;
 
             case R.id.unassign:
-                Intent intent2 = new Intent(HomeActivity.this, UnassignedJobActivity.class);
-                startActivity(intent2);
+                Intent intent6 = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
+                startActivity(intent6);
                 break;
 
             case R.id.complete:
-                Intent intent3 = new Intent(HomeActivity.this, CompleteActivity.class);
-                startActivity(intent3);
+                Intent intent9 = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
+                startActivity(intent9);
                 break;
 
         }

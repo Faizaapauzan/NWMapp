@@ -11,7 +11,7 @@
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_password.xml" value="0.211" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/ic_username.xml" value="0.211" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_view_bg.xml" value="0.181" />
-        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job.xml" value="0.1286549707602339" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fl.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fst.xml" value="0.25" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.1675929884566054" />
@@ -20,6 +20,7 @@
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job_fl.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassigned_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_assigned_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_unassign_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/header.xml" value="0.1675929884566054" />

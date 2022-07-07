@@ -16,18 +16,13 @@
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        />
-
-
-
+        android:theme="?attr/actionBarTheme" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#EDEDED"
-        android:text="Completed"
+        android:text="@string/completed"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -62,8 +57,7 @@
         android:background="@drawable/card_background"
         app:cardCornerRadius="8dp" />
     </LinearLayout>
+
     </ScrollView>
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
