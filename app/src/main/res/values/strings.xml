@@ -40,4 +40,5 @@
     <string name="rest_hour">Rest Hour</string>
     <string name="report_off">Report Off</string>
     <string name="log_out">Log Out</string>
+    <string name="job_assign">job_assign</string>
 </resources>
