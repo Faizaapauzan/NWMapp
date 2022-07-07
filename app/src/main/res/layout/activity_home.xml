@@ -9,6 +9,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -17,13 +18,8 @@
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -34,10 +30,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleTextColor="@color/white"
+                    android:background="@color/white"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+            <!--            <include-->
+            <!--                layout="@layout/main_toolbar"/>-->
+
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="5dp"
-                android:layout_marginTop="60dp"
                 android:background="#D30000" />
 
             <TextView
@@ -120,13 +134,7 @@
                     android:layout_marginTop="134dp"
                     android:text="@string/reason" />
 
-                <TextView
-                    android:id="@+id/todojob_assign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
-                    android:layout_marginTop="158dp"
-                    android:text="@string/job_assign" />
+
             </androidx.cardview.widget.CardView>
 
             <View
@@ -207,13 +215,7 @@
                     android:layout_marginTop="115dp"
                     android:text="@string/serialnumber" />
 
-                <TextView
-                    android:id="@+id/doingjob_assign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
-                    android:layout_marginTop="158dp"
-                    android:text="@string/job_assign" />
+
             </androidx.cardview.widget.CardView>
 
             <View
@@ -296,13 +298,7 @@
                     android:layout_marginTop="134dp"
                     android:text="@string/reason" />
 
-                <TextView
-                    android:id="@+id/pendingjob_assign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
-                    android:layout_marginTop="158dp"
-                    android:text="@string/job_assign" />
+
             </androidx.cardview.widget.CardView>
 
             <View
@@ -378,13 +374,7 @@
                     android:layout_marginTop="115dp"
                     android:text="@string/serialnumber" />
 
-                <TextView
-                    android:id="@+id/completedjob_assign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
-                    android:layout_marginTop="158dp"
-                    android:text="@string/job_assign" />
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
