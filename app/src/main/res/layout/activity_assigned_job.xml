@@ -8,11 +8,13 @@
     android:layout_height="match_parent"
     tools:openDrawer="start"
     android:fitsSystemWindows="true"
+    android:background="#ECECEC"
     tools:context=".AssignedJob">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
 
             android:orientation="vertical"
@@ -21,7 +23,6 @@
 
             <include
                 layout="@layout/main_toolbar"/>
-
 
             <View
                 android:layout_width="wrap_content"
@@ -40,7 +41,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvTodo"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 android:background="@drawable/card_background"
@@ -58,21 +59,20 @@
                 android:text="@string/doing"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
+                android:textStyle="bold" />
 
-                />
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvDoing"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 android:background="@drawable/card_background"
                 app:cardCornerRadius="8dp" />
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
 
+    </androidx.core.widget.NestedScrollView>
 
     <RelativeLayout
         android:layout_width="300dp"
