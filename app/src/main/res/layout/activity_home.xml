@@ -10,7 +10,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -18,9 +17,6 @@
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
-
-
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,7 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
@@ -44,7 +39,6 @@
                     android:background="@color/white"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme" />
-
 
             </com.google.android.material.appbar.AppBarLayout>
             <!--            <include-->
@@ -135,7 +129,6 @@
                     android:layout_marginTop="134dp"
                     android:text="@string/reason" />
 
-
             </androidx.cardview.widget.CardView>
 
             <View
@@ -215,7 +208,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="115dp"
                     android:text="@string/serialnumber" />
-
 
             </androidx.cardview.widget.CardView>
 
@@ -299,7 +291,6 @@
                     android:layout_marginTop="134dp"
                     android:text="@string/reason" />
 
-
             </androidx.cardview.widget.CardView>
 
             <View
@@ -374,7 +365,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="115dp"
                     android:text="@string/serialnumber" />
-
 
             </androidx.cardview.widget.CardView>
 
