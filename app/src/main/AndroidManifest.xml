@@ -20,7 +20,7 @@
             android:name=".CompleteActivity"
             android:exported="false" />
         <activity
-            android:name=".PendingActivity"
+            android:name=".UnassignedJobActivity"
             android:exported="false" />
         <activity
             android:name=".HomeKeong"
