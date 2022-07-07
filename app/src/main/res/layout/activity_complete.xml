@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/drawerLayout"
     android:layout_height="match_parent"
     tools:context=".CompleteActivity"
-    android:background="#ECECEC"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -17,13 +17,13 @@
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:minHeight="?attr/actionBarSize" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#EDEDED"
-        android:text="@string/completed"
+        android:text="Completed"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -58,7 +58,8 @@
         android:background="@drawable/card_background"
         app:cardCornerRadius="8dp" />
     </LinearLayout>
-
     </ScrollView>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

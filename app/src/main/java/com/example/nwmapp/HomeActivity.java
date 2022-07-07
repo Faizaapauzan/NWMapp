@@ -3,6 +3,7 @@ package com.example.nwmapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -39,8 +40,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 //        Objects.requireNonNull(getSupportActionBar()).hide();
 //
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     @Override
