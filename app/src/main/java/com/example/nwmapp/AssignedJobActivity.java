@@ -37,9 +37,7 @@ public class AssignedJobActivity extends AppCompatActivity implements Navigation
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-//
-//        Objects.requireNonNull(getSupportActionBar()).hide();
-//
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -58,23 +56,23 @@ public class AssignedJobActivity extends AppCompatActivity implements Navigation
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()== R.id.home) {
-                Intent intent5 = new Intent(AssignedJobActivity.this,HomeActivity.class);
-                startActivity(intent5);
+                Intent intent = new Intent(AssignedJobActivity.this,HomeActivity.class);
+                startActivity(intent);
             }
 
         if(item.getItemId()== R.id.assign) {
-            Intent intent5 = new Intent(AssignedJobActivity.this, AssignedJobActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(AssignedJobActivity.this, AssignedJobActivity.class);
+            startActivity(intent);
         }
 
         if(item.getItemId()== R.id.unassign) {
-            Intent intent5 = new Intent(AssignedJobActivity.this, UnassignedJobActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(AssignedJobActivity.this, UnassignedJobActivity.class);
+            startActivity(intent);
         }
 
         if(item.getItemId()== R.id.complete) {
-            Intent intent5 = new Intent(AssignedJobActivity.this, CompleteActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(AssignedJobActivity.this, CompleteActivity.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
