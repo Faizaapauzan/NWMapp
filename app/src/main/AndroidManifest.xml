@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NWMapp"
         tools:targetApi="31">
+
+
         <activity
             android:name=".AssignedJobActivity"
             android:exported="false" />
@@ -20,7 +22,7 @@
             android:name=".CompleteActivity"
             android:exported="false" />
         <activity
-            android:name=".PendingActivity"
+            android:name=".UnassignedJobActivity"
             android:exported="false" />
         <activity
             android:name=".HomeKeong"
