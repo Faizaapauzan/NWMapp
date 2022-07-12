@@ -73,6 +73,11 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
             startActivity(intent5);
         }
 
+        if(item.getItemId()== R.id.pending) {
+            Intent intent5 = new Intent(CompleteActivity.this, PendingActivity.class);
+            startActivity(intent5);
+        }
+
         if(item.getItemId()== R.id.complete) {
             Intent intent5 = new Intent(CompleteActivity.this, CompleteActivity.class);
             startActivity(intent5);
@@ -80,11 +85,6 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
 
         if(item.getItemId()== R.id.incomplete) {
             Intent intent5 = new Intent(CompleteActivity.this, IncompleteActivity.class);
-            startActivity(intent5);
-        }
-
-        if(item.getItemId()== R.id.pending) {
-            Intent intent5 = new Intent(CompleteActivity.this, PendingActivity.class);
             startActivity(intent5);
         }
 
