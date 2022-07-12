@@ -90,6 +90,11 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
             startActivity(intent5);
         }
 
+        if(item.getItemId()== R.id.pending) {
+            Intent intent5 = new Intent(IncompleteActivity.this, PendingActivity.class);
+            startActivity(intent5);
+        }
+
         if(item.getItemId()== R.id.complete) {
             Intent intent5 = new Intent(IncompleteActivity.this, CompleteActivity.class);
             startActivity(intent5);
@@ -97,11 +102,6 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
 
         if(item.getItemId()== R.id.incomplete) {
             Intent intent5 = new Intent(IncompleteActivity.this, IncompleteActivity.class);
-            startActivity(intent5);
-        }
-
-        if(item.getItemId()== R.id.pending) {
-            Intent intent5 = new Intent(IncompleteActivity.this, PendingActivity.class);
             startActivity(intent5);
         }
 
