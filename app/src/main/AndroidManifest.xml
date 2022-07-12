@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NWMapp"
         tools:targetApi="31">
+
+
         <activity
             android:name=".PendingActivity"
             android:exported="false" />

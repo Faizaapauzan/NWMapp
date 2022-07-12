@@ -3,6 +3,7 @@ package com.example.nwmapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -37,10 +38,8 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-//        Objects.requireNonNull(getSupportActionBar()).hide();
-//
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     @Override
@@ -56,23 +55,23 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()== R.id.home) {
-            Intent intent5 = new Intent(UnassignedJobActivity.this,HomeActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(UnassignedJobActivity.this, HomeActivity.class);
+            startActivity(intent);
         }
 
         if(item.getItemId()== R.id.assign) {
-            Intent intent5 = new Intent(UnassignedJobActivity.this, AssignedJobActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(UnassignedJobActivity.this, AssignedJobActivity.class);
+            startActivity(intent);
         }
 
         if(item.getItemId()== R.id.unassign) {
-            Intent intent5 = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(UnassignedJobActivity.this, UnassignedJobActivity.class);
+            startActivity(intent);
         }
 
         if(item.getItemId()== R.id.complete) {
-            Intent intent5 = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
-            startActivity(intent5);
+            Intent intent = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
