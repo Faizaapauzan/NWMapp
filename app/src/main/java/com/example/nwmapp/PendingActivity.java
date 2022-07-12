@@ -3,6 +3,7 @@ package com.example.nwmapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -11,13 +12,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
-import androidx.appcompat.widget.Toolbar;
-
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.Objects;
+public class PendingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-public class CompleteActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -25,7 +23,7 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complete);
+        setContentView(R.layout.activity_pending);
 
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
@@ -59,32 +57,32 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()== R.id.home) {
-            Intent intent5 = new Intent(CompleteActivity.this,HomeActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this,HomeActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.assign) {
-            Intent intent5 = new Intent(CompleteActivity.this, AssignedJobActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this, AssignedJobActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.unassign) {
-            Intent intent5 = new Intent(CompleteActivity.this, UnassignedJobActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this, UnassignedJobActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.complete) {
-            Intent intent5 = new Intent(CompleteActivity.this, CompleteActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this, CompleteActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.incomplete) {
-            Intent intent5 = new Intent(CompleteActivity.this, IncompleteActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this, IncompleteActivity.class);
             startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.pending) {
-            Intent intent5 = new Intent(CompleteActivity.this, PendingActivity.class);
+            Intent intent5 = new Intent(PendingActivity.this, PendingActivity.class);
             startActivity(intent5);
         }
 
@@ -95,5 +93,4 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
 
 
 }
-
 

@@ -75,6 +75,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent5);
         }
 
+        if(item.getItemId()== R.id.incomplete) {
+            Intent intent5 = new Intent(HomeActivity.this, IncompleteActivity.class);
+            startActivity(intent5);
+        }
+
+        if(item.getItemId()== R.id.pending) {
+            Intent intent5 = new Intent(HomeActivity.this, PendingActivity.class);
+            startActivity(intent5);
+        }
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
