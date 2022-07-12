@@ -63,7 +63,6 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
 
     }
 
-
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -104,8 +103,6 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
             Intent intent5 = new Intent(IncompleteActivity.this, IncompleteActivity.class);
             startActivity(intent5);
         }
-
-
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

@@ -40,7 +40,6 @@
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme" />
 
-
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.cardview.widget.CardView

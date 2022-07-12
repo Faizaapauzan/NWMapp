@@ -86,7 +86,6 @@ public class PendingActivity extends AppCompatActivity implements NavigationView
             startActivity(intent5);
         }
 
-
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
