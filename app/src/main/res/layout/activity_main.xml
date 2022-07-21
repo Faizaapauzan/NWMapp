@@ -16,36 +16,36 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="209dp"
-            android:layout_marginTop="-7dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-8dp"
             app:srcCompat="@drawable/nwm_background"
             tools:ignore="ContentDescription,ImageContrastCheck" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/NeoWoodworking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="250dp"
         android:text="Neo Woodworking"
         android:textAlignment="center"
         android:textColor="@color/blue_nwm"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif"
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Machinery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="320dp"
         android:text="Machinery"
         android:textAlignment="center"
         android:textColor="@color/blue_nwm"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif"
         tools:ignore="HardcodedText" />
@@ -54,10 +54,11 @@
         <EditText
             android:id="@+id/Username"
             android:hint="Username"
+            android:textColorHint="#737788"
             android:inputType="text"
             android:layout_width="305dp"
             android:layout_height="70dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="430dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_username"
@@ -67,15 +68,17 @@
             android:ems="10"
             android:textSize="20sp"
             android:importantForAutofill="no"
+            android:textColor="@color/blue_nwm"
             tools:ignore="HardcodedText,TextContrastCheck"/>
 
         <EditText
             android:id="@+id/Password"
             android:hint="Password"
+            android:textColorHint="#737788"
             android:inputType="text"
             android:layout_width="305dp"
             android:layout_height="70dp"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="530dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_lock"
@@ -85,6 +88,7 @@
             android:ems="10"
             android:textSize="20sp"
             android:importantForAutofill="no"
+            android:textColor="@color/blue_nwm"
             tools:ignore="HardcodedText,TextContrastCheck,TextFields"/>
 
 
@@ -93,7 +97,7 @@
         android:layout_width="305dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="650dp"
         android:background="@drawable/background_btn_blue"
         android:text="LOGIN"
         android:textColor="@color/white"

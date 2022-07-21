@@ -40,7 +40,6 @@
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme" />
 
-
             </com.google.android.material.appbar.AppBarLayout>
 
             <View
@@ -66,7 +65,6 @@
                 android:layout_marginRight="3dp"
                 android:background="@drawable/card_background"
                 app:cardCornerRadius="8dp" >
-
 
                 <TextView
                     android:id="@+id/PendingJobRegister_id"
