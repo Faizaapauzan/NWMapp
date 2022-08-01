@@ -9,7 +9,7 @@ import retrofit2.http.POST;
 
 public interface API {
 
-    @POST("staff_registerAPI.php")
+    @POST("login")
     @FormUrlEncoded
     Call<DefaultResponse> getTechnician (
             @Field("username") String username,

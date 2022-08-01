@@ -27,10 +27,10 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putInt("staffregister_id", user.getStaffregister_id());
+        editor.putInt("staffregister_id", user.getStaffregisterId());
         editor.putString("username", user.getUsername());
         editor.putString("password", user.getPassword());
-        editor.putString("technician_rank", user.getTechnician_rank());
+        editor.putString("technician_rank", user.getTechnicianRank());
 
         editor.apply();
     }

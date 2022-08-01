@@ -1,26 +1,58 @@
 package com.example.nwmapp.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+
 public class DefaultResponse {
 
-    private boolean error;
+    @SerializedName("status")
+    @Expose
+    private Boolean status;
+    @SerializedName("message")
+    @Expose
     private String message;
+    @SerializedName("user")
+    @Expose
     private User user;
+    @SerializedName("token")
+    @Expose
+    private String token;
+    private boolean error;
 
-    public DefaultResponse(boolean error, String message, User user) {
-        this.error = error;
-        this.message = message;
-        this.user = user;
+    public Boolean getStatus() {
+        return status;
     }
 
-    public boolean isError() {
-        return error;
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
     public String getMessage() {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     public User getUser() {
         return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public boolean isError() {
+        return error;
     }
 }
