@@ -75,22 +75,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 DefaultResponse defaultResponse = response.body();
 
-                if (!defaultResponse.isError()) {
+                if (response.code()==200) {
                     SharedPrefManager.getInstance(MainActivity.this)
                             .saveUser(defaultResponse.getUser());
 
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+                }
 
-                } else {
-                    Toast.makeText(MainActivity.this, defaultResponse.getMessage(), Toast.LENGTH_LONG).show();
+                else {
+                    Toast.makeText(MainActivity.this,"Login Failed", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure (Call <DefaultResponse> call, Throwable t){
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Login Failed", Toast.LENGTH_LONG).show();
             }
         });
     }

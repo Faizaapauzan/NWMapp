@@ -15,4 +15,13 @@ public interface API {
             @Field("username") String username,
             @Field("password") String password
     );
+
+    @POST("job")
+    @FormUrlEncoded
+    Call<DefaultResponse> getJibAssign (
+            @Field("username") String username,
+            @Field("password") String password
+    );
+
+
 }

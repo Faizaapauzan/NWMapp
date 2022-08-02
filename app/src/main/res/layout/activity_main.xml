@@ -91,7 +91,6 @@
             android:textColor="@color/blue_nwm"
             tools:ignore="HardcodedText,TextContrastCheck,TextFields"/>
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/LoginButton"
         android:layout_width="305dp"

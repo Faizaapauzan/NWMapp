@@ -9,16 +9,18 @@ public class DefaultResponse {
     @SerializedName("status")
     @Expose
     private Boolean status;
+
     @SerializedName("message")
     @Expose
     private String message;
+
     @SerializedName("user")
     @Expose
     private User user;
+
     @SerializedName("token")
     @Expose
     private String token;
-    private boolean error;
 
     public Boolean getStatus() {
         return status;
@@ -50,9 +52,5 @@ public class DefaultResponse {
 
     public void setToken(String token) {
         this.token = token;
-    }
-
-    public boolean isError() {
-        return error;
     }
 }
