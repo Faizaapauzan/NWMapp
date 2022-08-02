@@ -18,7 +18,7 @@ public interface API {
 
     @POST("job")
     @FormUrlEncoded
-    Call<DefaultResponse> getJibAssign (
+    Call<DefaultResponse> getJobAssign (
             @Field("username") String username,
             @Field("password") String password
     );
