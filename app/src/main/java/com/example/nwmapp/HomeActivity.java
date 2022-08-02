@@ -74,7 +74,7 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
-        Toast.makeText(this, "You have been logged  out", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You have been logged out.", Toast.LENGTH_SHORT).show();
 
     }
 
