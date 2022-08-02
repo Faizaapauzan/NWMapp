@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 else {
-                    Toast.makeText(MainActivity.this,"Login Failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Username & Password does not match", Toast.LENGTH_LONG).show();
                 }
             }
 
