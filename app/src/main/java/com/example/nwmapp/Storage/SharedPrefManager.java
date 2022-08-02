@@ -8,13 +8,18 @@ import com.example.nwmapp.models.User;
 public class SharedPrefManager {
 
     private static final String SHARED_PREF_NAME = "my_shared_preff";
+    private SharedPreferences sharedPreferences;
+    Context context;
+    private SharedPreferences.Editor editor;
 
     private static SharedPrefManager mInstance;
     private final Context mCtx;
 
-    private SharedPrefManager(Context mCtx) {
+    public SharedPrefManager(Context mCtx) {
         this.mCtx = mCtx;
     }
+
+
 
     public static synchronized SharedPrefManager getInstance(Context mCtx) {
         if(mInstance == null){
@@ -50,6 +55,14 @@ public class SharedPrefManager {
         );
     }
 
+
+    public void logout(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        editor=sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+    }
     public void  clear (){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

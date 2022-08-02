@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -21,6 +22,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        sharedPrefManager=new SharedPrefManager(getApplicationContext());
     }
 
     @Override
@@ -62,6 +66,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+    private void logout() {
+
+sharedPrefManager.logout();
+Intent intent=new Intent(HomeActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+
+        Toast.makeText(this, "You have been logged  out", Toast.LENGTH_SHORT).show();
+
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -94,6 +110,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if(item.getItemId()== R.id.pending) {
             Intent intent5 = new Intent(HomeActivity.this, PendingActivity.class);
             startActivity(intent5);
+        }
+
+        if(item.getItemId()== R.id.logout) {
+            logout();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
