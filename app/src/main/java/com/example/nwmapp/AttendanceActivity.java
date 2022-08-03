@@ -1,5 +1,14 @@
 package com.example.nwmapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -8,15 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.TextView;
-
-
+import com.example.nwmapp.Storage.SharedPrefManager;
 import com.google.android.material.navigation.NavigationView;
 
 import java.text.SimpleDateFormat;
@@ -32,6 +33,7 @@ public class AttendanceActivity extends AppCompatActivity implements NavigationV
     Button btnUpdate, btnIn, btnOut; // for dialog box
     TextView currentDate,clockIn, clockOut; // for dialog box
     AlertDialog dialog;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class AttendanceActivity extends AppCompatActivity implements NavigationV
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        sharedPrefManager=new SharedPrefManager(getApplicationContext());
 
 
         // for attendance layout
@@ -128,6 +132,17 @@ public class AttendanceActivity extends AppCompatActivity implements NavigationV
             super.onBackPressed();
         }
     }
+    private void logout() {
+
+        sharedPrefManager.logout();
+        Intent intent=new Intent(AttendanceActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+
+        Toast.makeText(this, "You have been logged out.", Toast.LENGTH_SHORT).show();
+
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -139,6 +154,11 @@ public class AttendanceActivity extends AppCompatActivity implements NavigationV
 
         if(item.getItemId()== R.id.attendance) {
             Intent intent = new Intent(AttendanceActivity.this, AttendanceActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.resthour) {
+            Intent intent = new Intent(AttendanceActivity.this, RestHourActivity.class);
             startActivity(intent);
         }
 
@@ -165,6 +185,10 @@ public class AttendanceActivity extends AppCompatActivity implements NavigationV
         if(item.getItemId()== R.id.pending) {
             Intent intent5 = new Intent(AttendanceActivity.this, PendingActivity.class);
             startActivity(intent5);
+        }
+
+        if(item.getItemId()== R.id.logout) {
+            logout();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
