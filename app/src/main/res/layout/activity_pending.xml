@@ -18,6 +18,9 @@
         app:menu="@menu/sidemenu"
         android:layout_gravity="start"/>
 
+
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -43,10 +46,28 @@
 
             </com.google.android.material.appbar.AppBarLayout>
 
+
+            <EditText
+                android:id="@+id/txtSearch"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/search_bg"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Search...."
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:singleLine="true"
+                tools:ignore="RtlSymmetry" />
+
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="5dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:background="#D30000" />
 
             <TextView
@@ -68,6 +89,15 @@
                 app:cardCornerRadius="8dp" >
 
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/todo_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
                 <TextView
                     android:id="@+id/PendingJobRegister_id"
                     android:layout_width="wrap_content"

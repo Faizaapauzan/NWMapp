@@ -31,7 +31,7 @@
         android:text="Neo Woodworking"
         android:textAlignment="center"
         android:textColor="@color/blue_nwm"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif"
         tools:ignore="HardcodedText" />
@@ -45,7 +45,7 @@
         android:text="Machinery"
         android:textAlignment="center"
         android:textColor="@color/blue_nwm"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif"
         tools:ignore="HardcodedText" />
@@ -101,6 +101,5 @@
         tools:ignore="HardcodedText,OnClick" />
 
 </RelativeLayout>
-
 
 

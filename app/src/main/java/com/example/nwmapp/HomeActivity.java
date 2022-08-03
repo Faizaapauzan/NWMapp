@@ -2,6 +2,7 @@ package com.example.nwmapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
@@ -12,10 +13,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
@@ -56,6 +58,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if(item.getItemId()== R.id.home) {
             Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.attendance) {
+            Intent intent = new Intent(HomeActivity.this, AttendanceActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.resthour) {
+            Intent intent = new Intent(HomeActivity.this, RestHourActivity.class);
             startActivity(intent);
         }
 

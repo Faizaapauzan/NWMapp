@@ -3,16 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_blue.xml" value="0.1945" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_save.xml" value="0.1945" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_update.xml" value="0.1945" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_white.xml" value="0.1945" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/bg_round.xml" value="0.1" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/round_button.xml" value="0.1475" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_bg.xml" value="0.1" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/textview_border.xml" value="0.179" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job.xml" value="0.17527173913043478" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_attendance.xml" value="0.22" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.1" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home_keong.xml" value="0.17594254937163376" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_incomplete.xml" value="0.15" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_pending.xml" value="0.1" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_rest_hour.xml" value="0.25" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassigned_job.xml" value="0.1480978260869565" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/dialog_attendance.xml" value="0.203125" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/dialog_job.xml" value="0.203125" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/dialog_rest_hour.xml" value="0.15234375" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/item_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/single_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/single_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/layout/textview_border.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/I THINK USER/AndroidStudioProjects/NWMapp/app/src/main/res/menu/sidemenu.xml" value="0.33" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/background_btn_blue.xml" value="0.2115" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/bg_edit_text.xml" value="0.211" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/custom_input.xml" value="0.2105" />
@@ -38,7 +54,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
