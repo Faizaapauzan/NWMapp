@@ -87,6 +87,16 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
             startActivity(intent);
         }
 
+        if(item.getItemId()== R.id.attendance) {
+            Intent intent = new Intent(HomeActivity.this, AttendanceActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.resthour) {
+            Intent intent = new Intent(HomeActivity.this, RestHourActivity.class);
+            startActivity(intent);
+        }
+
         if(item.getItemId()== R.id.assign) {
             Intent intent = new Intent(HomeActivity.this, AssignedJobActivity.class);
             startActivity(intent);

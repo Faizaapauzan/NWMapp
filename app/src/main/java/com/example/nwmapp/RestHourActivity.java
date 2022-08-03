@@ -1,12 +1,5 @@
 package com.example.nwmapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,7 +10,16 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.nwmapp.Storage.SharedPrefManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -31,6 +33,7 @@ public class RestHourActivity extends AppCompatActivity implements NavigationVie
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    SharedPrefManager sharedPrefManager;
 
     //for hide/show layout
     TextInputLayout textInputLayout;
@@ -58,6 +61,8 @@ public class RestHourActivity extends AppCompatActivity implements NavigationVie
         // for hide & show layout
         btn_ass = findViewById(R.id.btn_ass);
         layout_hide_show = findViewById(R.id.layout_hide_show);
+
+
 
 
         //time & date
@@ -135,6 +140,8 @@ public class RestHourActivity extends AppCompatActivity implements NavigationVie
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        sharedPrefManager=new SharedPrefManager(getApplicationContext());
 
         //hide or show extra assistant
         btn_ass.setOnClickListener(new View.OnClickListener() {
@@ -285,6 +292,17 @@ public class RestHourActivity extends AppCompatActivity implements NavigationVie
         }
     }
 
+    private void logout() {
+
+        sharedPrefManager.logout();
+        Intent intent=new Intent(RestHourActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+
+        Toast.makeText(this, "You have been logged out.", Toast.LENGTH_SHORT).show();
+
+    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -326,6 +344,10 @@ public class RestHourActivity extends AppCompatActivity implements NavigationVie
         if(item.getItemId()== R.id.pending) {
             Intent intent5 = new Intent(RestHourActivity.this, PendingActivity.class);
             startActivity(intent5);
+        }
+
+        if(item.getItemId()== R.id.logout) {
+            logout();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
