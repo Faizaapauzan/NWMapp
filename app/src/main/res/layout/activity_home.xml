@@ -58,13 +58,13 @@
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvTodo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 android:background="@drawable/card_background"
-                app:cardCornerRadius="8dp" >
+                app:cardCornerRadius="8dp"
+                >
 
                 <TextView
                     android:id="@+id/todojobregister_id"

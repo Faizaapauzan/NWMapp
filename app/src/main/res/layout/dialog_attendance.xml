@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="5dp">
+        
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date : "
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="23sp" />
+
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="23sp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+
+    <TextView
+            android:id="@+id/clockIn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textSize="23sp"
+            android:background="#ECEFF1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIn"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:background="#0277BD"
+            android:textSize="23sp"
+            android:text="IN"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/clockOut"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textSize="23sp"
+            android:background="#ECEFF1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOut"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:background="#0277BD"
+            android:textSize="23sp"
+            android:text="OUT"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:text="Update"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_btn_update"
+        android:textSize="23sp"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+</LinearLayout>

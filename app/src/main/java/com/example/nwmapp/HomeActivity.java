@@ -74,7 +74,7 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
-        Toast.makeText(this, "You have been logged  out", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You have been logged out.", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -84,6 +84,16 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
 
         if(item.getItemId()== R.id.home) {
             Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.attendance) {
+            Intent intent = new Intent(HomeActivity.this, AttendanceActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.resthour) {
+            Intent intent = new Intent(HomeActivity.this, RestHourActivity.class);
             startActivity(intent);
         }
 
