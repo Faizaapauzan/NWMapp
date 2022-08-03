@@ -12,9 +12,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nwmapp.API.RetrofitClient;
 import com.example.nwmapp.Storage.SharedPrefManager;
+import com.example.nwmapp.adapter.JobAssignRecyclerAdapter;
+import com.example.nwmapp.models.JobAssign;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +35,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     SharedPrefManager sharedPrefManager;
 
+    RecyclerView recyclerView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +45,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
+
+        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        jobData();
 
         setSupportActionBar(toolbar);
 
@@ -45,6 +64,32 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         sharedPrefManager=new SharedPrefManager(getApplicationContext());
+
+
+    }
+
+    private void jobData() {
+
+        Call<List<JobAssign>> callJob = RetrofitClient
+                .getInstance()
+                .getAPI()
+                .getJobAssign();
+
+        callJob.enqueue(new Callback<List<JobAssign>>() {
+            @Override
+            public void onResponse(Call<List<JobAssign>> call, Response<List<JobAssign>> response) {
+                List<JobAssign> assignData = response.body();
+                JobAssignRecyclerAdapter adapter = new JobAssignRecyclerAdapter(assignData);
+                recyclerView.setAdapter(adapter);
+
+            }
+
+            @Override
+            public void onFailure(Call<List<JobAssign>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 
     @Override
@@ -97,6 +142,7 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
             startActivity(intent);
         }
 
+
         if(item.getItemId()== R.id.assign) {
             Intent intent = new Intent(HomeActivity.this, AssignedJobActivity.class);
             startActivity(intent);
@@ -129,4 +175,5 @@ Intent intent=new Intent(HomeActivity.this, MainActivity.class);
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

@@ -16,11 +16,12 @@ public interface API {
             @Field("password") String password
     );
 
-//    @POST("job")
-//    @FormUrlEncoded
-//    Call<DefaultResponse> getJobAssign (
-//            @Field("username") String username,
-//            @Field("password") String password
-//    );
+    @POST("job")
+    @FormUrlEncoded
+    Call<DefaultResponse> getJobAssign (
+            @Field("username") String username,
+            @Field("password") String password
+    );
+
 
 }
