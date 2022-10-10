@@ -57,87 +57,14 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvPending"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pendingrecyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:background="@drawable/card_background"
-                app:cardCornerRadius="8dp" >
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
 
-                <TextView
-                    android:id="@+id/PendingJobRegister_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/pendingJob_priority"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/job_priority"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/pendingJob_order_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="19dp"
-                    android:text="@string/job_order_number" />
-
-                <TextView
-                    android:id="@+id/pendingCustomer_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="39dp"
-                    android:text="@string/customer_name" />
-
-                <TextView
-                    android:id="@+id/pendingJob_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="58dp"
-                    android:text="@string/job_description" />
-
-                <TextView
-                    android:id="@+id/pendingMachine_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="77dp"
-                    android:text="@string/machine_name" />
-
-                <TextView
-                    android:id="@+id/pendingMachine_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="96dp"
-                    android:text="@string/machine_type" />
-
-                <TextView
-                    android:id="@+id/pendingSerialnumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="115dp"
-                    android:text="@string/serialnumber" />
-
-                <TextView
-                    android:id="@+id/pendingJob_assign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
-                    android:layout_marginTop="158dp"
-                    android:text="@string/job_assign" />
-
-                <TextView
-                    android:id="@+id/pendingReason"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="134dp"
-                    android:text="@string/reason" />
-
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

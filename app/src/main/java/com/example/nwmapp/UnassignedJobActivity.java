@@ -12,17 +12,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nwmapp.API.RetrofitClient;
 import com.example.nwmapp.Storage.SharedPrefManager;
+import com.example.nwmapp.adapter.UnassignedJobAdapter;
+import com.example.nwmapp.models.JobAssign;
 import com.google.android.material.navigation.NavigationView;
 
-public class UnassignedJobActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class UnassignedJobActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     SharedPrefManager sharedPrefManager;
+
+    RecyclerView unassignedrecyclerview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +43,11 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
+
+        unassignedrecyclerview = findViewById(R.id.unassignedrecyclerview);
+        unassignedrecyclerview.setLayoutManager(new LinearLayoutManager(this));
+
+        unassignedJobData();
 
         setSupportActionBar(toolbar);
 
@@ -45,6 +62,39 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         sharedPrefManager=new SharedPrefManager(getApplicationContext());
+    }
+
+    private void unassignedJobData() {
+
+        Call<List<JobAssign>> callJob = RetrofitClient
+                .getInstance()
+                .getAPI()
+                .getUnassignedJob();
+
+        callJob.enqueue(new Callback<List<JobAssign>>() {
+            @Override
+            public void onResponse(Call<List<JobAssign>> call, Response<List<JobAssign>> response) {
+                List<JobAssign> assignData = response.body();
+                UnassignedJobAdapter adapter = new UnassignedJobAdapter(assignData);
+                unassignedrecyclerview.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<JobAssign>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -98,6 +148,16 @@ public class UnassignedJobActivity extends AppCompatActivity implements Navigati
         if(item.getItemId()== R.id.complete) {
             Intent intent = new Intent(UnassignedJobActivity.this, CompleteActivity.class);
             startActivity(intent);
+        }
+
+        if(item.getItemId()== R.id.incomplete) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this, IncompleteActivity.class);
+            startActivity(intent5);
+        }
+
+        if(item.getItemId()== R.id.pending) {
+            Intent intent5 = new Intent(UnassignedJobActivity.this, PendingActivity.class);
+            startActivity(intent5);
         }
 
         if(item.getItemId()== R.id.logout) {

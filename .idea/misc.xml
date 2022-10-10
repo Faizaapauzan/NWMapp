@@ -27,17 +27,27 @@
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/drawable/search_view_bg.xml" value="0.181" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fl.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_assigned_job_fst.xml" value="0.25" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_attendance.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_complete.xml" value="0.1" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home.xml" value="0.15604959384352288" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_home_keong.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_incomplete.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_pending.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_rest_hour.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassign_job_fl.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/activity_unassigned_job.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/dialog_attendance.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_assigned_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/fragment_unassign_job.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/header.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/headerfile.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/item_drawer_main.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/item_list.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/job_list.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/pending_joblist.xml" value="0.16673792218896966" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/toolbar.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/layout/unassigned_joblist.xml" value="0.16673792218896966" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/bottom_nav.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/iThink User/AndroidStudioProjects/NWMapp/app/src/main/res/menu/sidemenu.xml" value="0.5" />
       </map>

@@ -23,5 +23,10 @@ public interface API {
     @GET("job")
     Call<List<JobAssign>>getJobAssign();
 
+    @GET("UnassignedJob")
+    Call<List<JobAssign>> getUnassignedJob();
+
+    @GET("pendingjob")
+    Call<List<JobAssign>> getPendingJob();
 
 }

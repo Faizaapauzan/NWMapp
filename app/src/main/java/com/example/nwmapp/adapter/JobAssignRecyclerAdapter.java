@@ -13,7 +13,6 @@ import com.example.nwmapp.models.JobAssign;
 
 import java.util.List;
 
-
 public class JobAssignRecyclerAdapter extends RecyclerView.Adapter<JobAssignRecyclerAdapter.myviewholder> {
 
     List<JobAssign> assignData;
@@ -64,5 +63,4 @@ public class JobAssignRecyclerAdapter extends RecyclerView.Adapter<JobAssignRecy
             reason = itemView.findViewById(R.id.reason);
         }
     }
-
 }

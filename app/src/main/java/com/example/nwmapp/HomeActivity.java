@@ -37,7 +37,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     RecyclerView recyclerView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +64,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         sharedPrefManager=new SharedPrefManager(getApplicationContext());
 
-
     }
 
     private void jobData() {
@@ -81,13 +79,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 List<JobAssign> assignData = response.body();
                 JobAssignRecyclerAdapter adapter = new JobAssignRecyclerAdapter(assignData);
                 recyclerView.setAdapter(adapter);
-
             }
 
             @Override
             public void onFailure(Call<List<JobAssign>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),t.toString(), Toast.LENGTH_LONG).show();
-
             }
         });
     }
@@ -114,13 +110,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private void logout() {
 
-sharedPrefManager.logout();
-Intent intent=new Intent(HomeActivity.this, MainActivity.class);
+        sharedPrefManager.logout();
+        Intent intent=new Intent(HomeActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
         Toast.makeText(this, "You have been logged out.", Toast.LENGTH_SHORT).show();
-
     }
 
 
