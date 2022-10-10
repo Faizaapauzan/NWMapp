@@ -23,5 +23,11 @@ public interface API {
     @GET("job")
     Call<List<JobAssign>>getJobAssign();
 
+    @GET("completedjob")
+    Call<List<JobAssign>>getCompleted();
+
+    @GET("incompletedjob")
+    Call<List<JobAssign>>getIncompleted();
+
 
 }

@@ -114,8 +114,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private void logout() {
 
-sharedPrefManager.logout();
-Intent intent=new Intent(HomeActivity.this, MainActivity.class);
+        sharedPrefManager.logout();
+        Intent intent=new Intent(HomeActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 

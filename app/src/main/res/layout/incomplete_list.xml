@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvIncomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/card_background"
+        app:cardCornerRadius="8dp" >
+
+        <TextView
+            android:id="@+id/IncompleteJobRegister_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/incompleteJob_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/job_priority"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IncompleteJob_order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="@string/job_order_number" />
+
+        <TextView
+            android:id="@+id/IncompleteCustomer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:text="@string/customer_name" />
+
+        <TextView
+            android:id="@+id/IncompleteJob_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:text="@string/job_description" />
+
+        <TextView
+            android:id="@+id/IncompleteMachine_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="77dp"
+            android:text="@string/machine_name" />
+
+        <TextView
+            android:id="@+id/IncompleteMachine_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="@string/machine_type" />
+
+        <TextView
+            android:id="@+id/IncompleteSerialnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:text="@string/serialnumber" />
+
+        <TextView
+            android:id="@+id/IncompleteJob_assign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="158dp"
+            android:text="@string/job_assign" />
+
+        <TextView
+            android:id="@+id/incompleteReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="134dp"
+            android:text="@string/reason" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

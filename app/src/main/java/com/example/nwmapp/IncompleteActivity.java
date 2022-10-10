@@ -12,9 +12,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nwmapp.API.RetrofitClient;
 import com.example.nwmapp.Storage.SharedPrefManager;
+import com.example.nwmapp.adapter.IncompleteAdapter;
+import com.example.nwmapp.models.JobAssign;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class IncompleteActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -23,7 +34,7 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
     Toolbar toolbar;
     SharedPrefManager sharedPrefManager;
 
-
+    RecyclerView incompleteRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +45,11 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
+
+        incompleteRV = findViewById(R.id.incompeleterv);
+        incompleteRV.setLayoutManager(new LinearLayoutManager(this));
+
+        incompleteData();
 
         setSupportActionBar(toolbar);
 
@@ -53,6 +69,29 @@ public class IncompleteActivity extends AppCompatActivity implements NavigationV
 
     }
 
+    private void incompleteData() {
+        Call<List<JobAssign>> callJob = RetrofitClient
+                .getInstance()
+                .getAPI()
+                .getIncompleted();
+
+        callJob.enqueue(new Callback<List<JobAssign>>() {
+            @Override
+            public void onResponse(Call<List<JobAssign>> call, Response<List<JobAssign>> response) {
+                List<JobAssign> assignData = response.body();
+
+                IncompleteAdapter adapter = new IncompleteAdapter(assignData);
+                incompleteRV.setAdapter(adapter);
+
+            }
+
+            @Override
+            public void onFailure(Call<List<JobAssign>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {

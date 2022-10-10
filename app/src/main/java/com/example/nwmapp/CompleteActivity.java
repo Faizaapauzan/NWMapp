@@ -12,15 +12,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nwmapp.API.RetrofitClient;
 import com.example.nwmapp.Storage.SharedPrefManager;
+import com.example.nwmapp.adapter.CompleteAdapter;
+import com.example.nwmapp.models.JobAssign;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CompleteActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     SharedPrefManager sharedPrefManager;
+
+    RecyclerView completeRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +44,11 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.tool_bar);
 
+        completeRV = findViewById(R.id.compeleterv);
+        completeRV.setLayoutManager(new LinearLayoutManager(this));
+
+        completeData();
+
         setSupportActionBar(toolbar);
 
         navigationView.bringToFront();
@@ -40,13 +58,37 @@ public class CompleteActivity extends AppCompatActivity implements NavigationVie
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         sharedPrefManager=new SharedPrefManager(getApplicationContext());
 
 
+    }
+
+    private void completeData() {
+
+        Call<List<JobAssign>> callJob = RetrofitClient
+                .getInstance()
+                .getAPI()
+                .getCompleted();
+
+        callJob.enqueue(new Callback<List<JobAssign>>() {
+            @Override
+            public void onResponse(Call<List<JobAssign>> call, Response<List<JobAssign>> response) {
+                List<JobAssign> assignData = response.body();
+
+                CompleteAdapter adapter = new CompleteAdapter(assignData);
+                completeRV.setAdapter(adapter);
+
+            }
+
+            @Override
+            public void onFailure(Call<List<JobAssign>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 
     @Override

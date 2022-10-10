@@ -28,6 +28,9 @@ public class JobAssign {
     @SerializedName("reason")
     private String reason;
 
+    @SerializedName("job_assign")
+    private String job_assign;
+
     public JobAssign(String job_priority, String job_order_number, String customer_name, String job_description, String machine_name, String machine_type, String serial_number, String reason) {
         this.job_priority = job_priority;
         this.job_order_number = job_order_number;
@@ -37,6 +40,7 @@ public class JobAssign {
         this.machine_type = machine_type;
         this.serial_number = serial_number;
         this.reason = reason;
+        this.job_assign = job_assign;
     }
 
     public String getJob_priority() {
@@ -101,5 +105,13 @@ public class JobAssign {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public String getAssign() {
+        return job_assign;
+    }
+
+    public void setAssign(String job_assign) {
+        this.job_assign = job_assign;
     }
 }
