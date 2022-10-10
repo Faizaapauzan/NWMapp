@@ -29,4 +29,11 @@ public interface API {
     @GET("pendingjob")
     Call<List<JobAssign>> getPendingJob();
 
+    @GET("completedjob")
+    Call<List<JobAssign>>getCompleted();
+
+    @GET("incompletedjob")
+    Call<List<JobAssign>>getIncompleted();
+
+
 }
